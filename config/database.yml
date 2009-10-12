@@ -2,7 +2,7 @@
 
 development:
   adapter: mysql
-  database: CHANGEME_development
+  database: suspenders_app_development
   username: root
   password: 
   host: localhost
@@ -10,7 +10,7 @@ development:
   
 test: &TEST
   adapter: mysql
-  database: CHANGEME_test
+  database: suspenders_app_test
   username: root
   password: 
   host: localhost
@@ -18,8 +18,8 @@ test: &TEST
   
 staging:
   adapter: mysql
-  database: CHANGEME_staging
-  username: CHANGEME
+  database: suspenders_app_staging
+  username: suspenders_app
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
   encoding: utf8
@@ -27,8 +27,8 @@ staging:
   
 production:
   adapter: mysql
-  database: CHANGEME_production
-  username: CHANGEME
+  database: suspenders_app_production
+  username: suspenders_app
   password: <%= File.read(PASSWORD_FILE).chomp if File.readable? PASSWORD_FILE %>
   host: localhost
   encoding: utf8
